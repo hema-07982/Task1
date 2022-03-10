@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+        
+        <!-- Boxicons CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         
+
+         <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
+    </head>
+        <style>
+           /* Google Font Link */
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+.sidebar{
+  position: fixed;
+  Right: 0;
+  top: 0;
+  height: 100%;
+  width: 60px;
+  background: #6ab5d8;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0; 
+    
+}
+ 
+.sidebar.open{
+  width: 440px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+ 
+ 
+ 
+ 
+.sidebar.open .logo-details #btn{
+  text-align: right;
+  position:fixed;
+}
+ 
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+#btn{
+  margin-top: 330px;
+  margin-left: -90px;
+  transform:rotate(-90deg);
+  text-align: center;
+  padding: 12px 30px;
+  position: fixed;
+  background-color: #E8562A;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+            
+}
+.video { 
+	display: block; 
+	width: auto; 
+	margin: 0 auto;  
+}  
+</style>
+    <body>
+        <iframe src="https://mozilla.github.io/pdf.js/web/viewer.html" height="100%" width="100%"></iframe>
+      
+        <div class="sidebar">
+          <div>
+          
+          <button id="btn">Videos</button>
+           
+          </div>
+       
+            <div class="logo-details">
+               
+             <div class="logo_name"></div>
+                
+
+             </div>
+            <ul class="nav-list">
+            <li>
+              <a class="popup-youtube" href="https://www.youtube.com/watch?v=lKOVYw9R7oI"> <iframe width="420" height="320" src="https://www.youtube.com/embed/lKOVYw9R7oI"></iframe></a>
+            </li>
+              
+            <li>
+              <a class="popup-youtube" href="https://www.youtube.com/watch?v=lKOVYw9R7oI"> <iframe width="420" height="320" src="https://www.youtube.com/embed/lKOVYw9R7oI"></iframe></a>
+            </li>
+             
+            <li>
+              <a class="popup-youtube" href="https://www.youtube.com/watch?v=lKOVYw9R7oI"> <iframe width="420" height="320" src="https://www.youtube.com/embed/lKOVYw9R7oI"></iframe></a>  
+            </li>
+             
+            <li>
+              <a class="popup-youtube" href="https://www.youtube.com/watch?v=lKOVYw9R7oI"> <iframe width="420" height="320" src="https://www.youtube.com/embed/lKOVYw9R7oI"></iframe></a>   
+             </li>
+
+             <li>
+              <a class="popup-youtube" href="https://www.youtube.com/watch?v=lKOVYw9R7oI"> <iframe width="420" height="320" src="https://www.youtube.com/embed/lKOVYw9R7oI"></iframe></a>
+             </li>
+              
+              
+            </ul>
+  
+          </div>
+
+          
+           
+         
+          
+              
+           
+          <script>
+            $(function() {
+            $('.popup-youtube ').magnificPopup({
+            disableOn: 700,
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: false,
+           fixedContentPos: false
+    });
+});
+
+
+          let sidebar = document.querySelector(".sidebar");
+          let closeBtn = document.querySelector("#btn");
+          let searchBtn = document.querySelector(".bx-search");
+        
+          closeBtn.addEventListener("click", ()=>{
+            sidebar.classList.toggle("open");
+            menuBtnChange();//calling the function(optional)
+          });
+        
+          
+        
+          // following are the code to change sidebar button(optional)
+          function menuBtnChange() {
+           if(sidebar.classList.contains("open")){
+             closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+           }else {
+             closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+           }
+          }
+          
+           
+          </script>
+           
+    </body>
+</html>
